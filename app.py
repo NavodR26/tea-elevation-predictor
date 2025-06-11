@@ -13,7 +13,7 @@ from src.config import TeaMarketConfig
 from src.data_loader import DataLoader
 from src.data_preprocessor import DataPreprocessor
 from src.feature_engineer import FeatureEngineer
-from src.ensemble_predictor import EnsemblePredictor
+from src.simple_predictor import SimplePredictor
 from src.visualization import Visualizer
 from src.google_sheets_manager import GoogleSheetsManager
 from utils.helpers import setup_logging, format_currency
@@ -72,9 +72,7 @@ def main():
             help="Number of optimization trials per model"
         )
         
-        # Update config
-        config.ENABLE_DEEP_TRAINING = enable_deep_training
-        config.OPTUNA_TRIALS = optuna_trials
+        # Note: Deep training disabled due to system constraints
     
     # Main content tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
@@ -119,8 +117,11 @@ def handle_csv_upload():
     
     if uploaded_file is not None:
         try:
-            # Load data
-            df = pd.read_csv(uploaded_file)
+            # Load and validate data
+            data_loader = DataLoader(config)
+            df = data_loader.load_csv(uploaded_file)
+            df = data_loader.validate_data_types(df)
+            df = data_loader.validate_data_ranges(df)
             
             # Display raw data info
             st.success(f"✅ File uploaded successfully! Found {len(df)} records.")
@@ -128,13 +129,13 @@ def handle_csv_upload():
             col1, col2 = st.columns(2)
             with col1:
                 st.metric("Total Records", len(df))
-                st.metric("Unique Elevations", df['Elevation'].nunique() if 'Elevation' in df.columns else 0)
+                st.metric("Unique Elevations", int(df['elevation'].nunique()) if 'elevation' in df.columns else 0)
             
             with col2:
-                if 'Year' in df.columns:
-                    st.metric("Year Range", f"{df['Year'].min()} - {df['Year'].max()}")
-                if 'Sale Number' in df.columns:
-                    st.metric("Sale Numbers", f"{df['Sale Number'].min()} - {df['Sale Number'].max()}")
+                if 'year' in df.columns:
+                    st.metric("Year Range", f"{int(df['year'].min())} - {int(df['year'].max())}")
+                if 'sale_no' in df.columns:
+                    st.metric("Sale Numbers", f"{int(df['sale_no'].min())} - {int(df['sale_no'].max())}")
             
             # Show data preview
             st.subheader("📋 Data Preview")
@@ -216,11 +217,11 @@ def process_data(df):
     try:
         with st.spinner("🔄 Processing data..."):
             # Preprocess data
-            preprocessor = DataPreprocessor()
+            preprocessor = DataPreprocessor(config)
             cleaned_df = preprocessor.clean_data(df)
             
             # Feature engineering
-            feature_engineer = FeatureEngineer()
+            feature_engineer = FeatureEngineer(config)
             featured_df = feature_engineer.create_features(cleaned_df)
             
             # Store processed data
@@ -451,7 +452,7 @@ def train_models(featured_df, valid_elevations, min_records, cv_folds):
             elevation_data = elevation_data.sort_values(['year', 'sale_no'])
             
             # Initialize and train predictor
-            predictor = EnsemblePredictor(feature_cols, elevation)
+            predictor = SimplePredictor(feature_cols, elevation, config)
             predictor.train(elevation_data, config.ENABLE_DEEP_TRAINING)
             
             # Store trained model

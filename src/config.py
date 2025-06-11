@@ -27,7 +27,7 @@ class TeaMarketConfig:
     
     # Feature Engineering Parameters
     MAX_SALES_PER_YEAR = 52
-    MIN_RECORDS_PER_ELEVATION = 10
+    MIN_RECORDS_PER_ELEVATION = 5
     LAG_PERIODS = [1, 2, 4, 8, 12]  # Weekly lags
     ROLLING_WINDOWS = [4, 8, 12, 24]  # Rolling window sizes
     
@@ -35,10 +35,10 @@ class TeaMarketConfig:
     MODEL_TYPES = ['lightgbm', 'xgboost', 'catboost']
     
     # Data Validation Parameters
-    MIN_PRICE = 10.0  # Minimum reasonable price
-    MAX_PRICE = 10000.0  # Maximum reasonable price
-    MIN_QUANTITY = 0.1  # Minimum quantity in kg
-    MAX_QUANTITY = 1000000.0  # Maximum quantity in kg
+    MIN_PRICE = 0.1  # Minimum reasonable price
+    MAX_PRICE = 50000.0  # Maximum reasonable price
+    MIN_QUANTITY = 0.001  # Minimum quantity in kg
+    MAX_QUANTITY = 10000000.0  # Maximum quantity in kg
     
     # Outlier Detection Parameters
     OUTLIER_IQR_MULTIPLIER = 1.5

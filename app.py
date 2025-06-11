@@ -262,7 +262,7 @@ def display_data_info(df):
         elevation_counts_raw = df['Elevation'].value_counts().reset_index()
         elevation_counts_raw.columns = ['Elevation', 'Record Count']
         elevation_counts_raw['Will Process'] = elevation_counts_raw['Record Count'].apply(
-            lambda x: '✅ Yes' if x >= 10 else '❌ No (needs ≥10)'
+            lambda x: '✅ Yes' if x >= 5 else '❌ No (needs ≥5)'
         )
         
         col1, col2 = st.columns(2)
@@ -272,8 +272,8 @@ def display_data_info(df):
             st.dataframe(elevation_counts_raw, use_container_width=True)
         
         # Show processing summary
-        will_process = elevation_counts_raw[elevation_counts_raw['Record Count'] >= 10]['Elevation'].tolist()
-        wont_process = elevation_counts_raw[elevation_counts_raw['Record Count'] < 10]['Elevation'].tolist()
+        will_process = elevation_counts_raw[elevation_counts_raw['Record Count'] >= 5]['Elevation'].tolist()
+        wont_process = elevation_counts_raw[elevation_counts_raw['Record Count'] < 5]['Elevation'].tolist()
         
         if will_process:
             st.success(f"Will process: {', '.join(will_process)}")
@@ -304,7 +304,7 @@ def display_processed_data_info(cleaned_df, featured_df):
     elevation_counts = cleaned_df['elevation'].value_counts().reset_index()
     elevation_counts.columns = ['Elevation', 'Record Count']
     elevation_counts['Status'] = elevation_counts['Record Count'].apply(
-        lambda x: '✅ Sufficient' if x >= 10 else '❌ Insufficient'
+        lambda x: '✅ Sufficient' if x >= 5 else '❌ Insufficient'
     )
     
     st.subheader("📈 Records per Elevation")
@@ -315,14 +315,14 @@ def display_processed_data_info(cleaned_df, featured_df):
         st.dataframe(elevation_counts, use_container_width=True)
     
     # Show training eligibility
-    sufficient_elevations = elevation_counts[elevation_counts['Record Count'] >= 10]['Elevation'].tolist()
-    insufficient_elevations = elevation_counts[elevation_counts['Record Count'] < 10]['Elevation'].tolist()
+    sufficient_elevations = elevation_counts[elevation_counts['Record Count'] >= 5]['Elevation'].tolist()
+    insufficient_elevations = elevation_counts[elevation_counts['Record Count'] < 5]['Elevation'].tolist()
     
     if sufficient_elevations:
         st.success(f"Will train models for: {', '.join(sufficient_elevations)}")
     if insufficient_elevations:
         st.warning(f"Skipping (insufficient data): {', '.join(insufficient_elevations)}")
-        st.info("Need at least 10 records per elevation for reliable model training")
+        st.info("Need at least 5 records per elevation for reliable model training")
     
     # Show feature columns
     with st.expander("🔍 View Feature Columns"):

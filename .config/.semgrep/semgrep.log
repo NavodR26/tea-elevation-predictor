@@ -1,0 +1,101 @@
+2025-06-11 11:05:59,779 - semgrep.notifications - WARNING - METRICS: Using configs from the Registry (like --config=p/ci) reports pseudonymous rule metrics to semgrep.dev.
+To disable Registry rule metrics, use "--metrics=off".
+Using configs only from local files (like --config=xyz.yml) does not enable metrics.
+
+More information: https://semgrep.dev/docs/metrics
+
+2025-06-11 11:05:59,780 - semgrep.run_scan - DEBUG - semgrep version 1.2.0
+2025-06-11 11:05:59,785 - semgrep.git - DEBUG - Failed to get project url from 'git ls-remote': Command failed with exit code: 128
+-----
+Command failed with output:
+fatal: No remote configured to list refs from.
+
+
+Failed to run 'git ls-remote --get-url'. Possible reasons:
+
+- the git binary is not available
+- the current working directory is not a git repository
+- the baseline commit is not a parent of the current commit
+    (if you are running through semgrep-app, check if you are setting `SEMGREP_BRANCH` or `SEMGREP_BASELINE_COMMIT` properly)
+- the current working directory is not marked as safe
+    (fix with `git config --global --add safe.directory $(pwd)`)
+
+Try running the command yourself to debug the issue.
+2025-06-11 11:05:59,786 - semgrep.config_resolver - DEBUG - Loading local config from /home/runner/workspace/.config/.semgrep/semgrep_rules.json
+2025-06-11 11:05:59,788 - semgrep.config_resolver - DEBUG - Done loading local config from /home/runner/workspace/.config/.semgrep/semgrep_rules.json
+2025-06-11 11:05:59,791 - semgrep.config_resolver - DEBUG - Saving rules to /tmp/semgrep-4xhdefr2.rules
+2025-06-11 11:05:59,943 - semgrep.semgrep_core - DEBUG - Failed to open resource semgrep-core-proprietary: [Errno 2] No such file or directory: '/tmp/_MEI2J4Of4/semgrep/bin/semgrep-core-proprietary'.
+2025-06-11 11:06:00,401 - semgrep.rule_lang - DEBUG - semgrep-core validation response: valid=True
+2025-06-11 11:06:00,401 - semgrep.rule_lang - DEBUG - semgrep-core validation succeeded
+2025-06-11 11:06:00,402 - semgrep.rule_lang - DEBUG - RPC validation succeeded
+2025-06-11 11:06:00,402 - semgrep.config_resolver - DEBUG - loaded 1 configs in 0.6163640022277832
+2025-06-11 11:06:00,474 - semgrep.run_scan - VERBOSE - running 712 rules from 1 config /home/runner/workspace/.config/.semgrep/semgrep_rules.json_0
+2025-06-11 11:06:00,475 - semgrep.run_scan - VERBOSE - No .semgrepignore found. Using default .semgrepignore rules. See the docs for the list of default ignores: https://semgrep.dev/docs/cli-usage/#ignore-files
+2025-06-11 11:06:00,481 - semgrep.run_scan - VERBOSE - Rules:
+2025-06-11 11:06:00,481 - semgrep.run_scan - VERBOSE - <SKIPPED DATA (too many entries; use --max-log-list-entries)>
+2025-06-11 11:06:00,643 - semgrep.core_runner - DEBUG - Passing whole rules directly to semgrep_core
+2025-06-11 11:06:00,726 - semgrep.core_runner - DEBUG - Running Semgrep engine with command:
+2025-06-11 11:06:00,727 - semgrep.core_runner - DEBUG - /tmp/_MEI2J4Of4/semgrep/bin/opengrep-core -json -rules /tmp/tmpng3pf6i0.json -j 8 -targets /tmp/tmpx_r68ou3 -timeout 5 -timeout_threshold 3 -max_memory 0 -fast
+2025-06-11 11:06:05,958 - semgrep.core_runner - DEBUG - --- semgrep-core stderr ---
+[00.07][[34mINFO[0m]: Executed as: /tmp/_MEI2J4Of4/semgrep/bin/opengrep-core -json -rules /tmp/tmpng3pf6i0.json -j 8 -targets /tmp/tmpx_r68ou3 -timeout 5 -timeout_threshold 3 -max_memory 0 -fast
+[00.07][[34mINFO[0m]: Version: 1.2.0
+[00.07][[34mINFO[0m]: Parsing rules in /tmp/tmpng3pf6i0.json
+[00.52][[34mINFO[0m]: scan: processing 57 files (skipping 0), with 525 rules (skipping 0 )
+[02.68][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.python.boto3.security.hardcoded-token file: src/feature_engineer.py func: _create_rolling_features:-1]
+[0m[02.89][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.python.boto3.security.hardcoded-token file: src/data_preprocessor.py func: detect_anomalies:-1]
+[0m[03.06][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.python.boto3.security.hardcoded-token file: src/data_loader.py func: validate_data_types:-1]
+[0m[05.19][[34mINFO[0m]: Custom ignore pattern: None
+[05.19][[34mINFO[0m]: Custom ignore pattern: None
+--- end semgrep-core stderr ---
+2025-06-11 11:06:05,965 - semgrep.core_runner - DEBUG - semgrep ran in 0:00:05.322008 on 23 files
+2025-06-11 11:06:05,967 - semgrep.core_runner - DEBUG - findings summary: 0 warning, 0 error, 0 info
+2025-06-11 11:06:05,968 - semgrep.app.auth - DEBUG - Getting API token from settings file
+2025-06-11 11:06:05,968 - semgrep.app.auth - DEBUG - No API token found in settings file
+2025-06-11 11:06:05,969 - semgrep.semgrep_core - DEBUG - Failed to open resource semgrep-core-proprietary: [Errno 2] No such file or directory: '/tmp/_MEI2J4Of4/semgrep/bin/semgrep-core-proprietary'.
+2025-06-11 11:06:06,078 - semgrep.output - VERBOSE - 
+========================================
+Files skipped:
+========================================
+
+  Always skipped by Opengrep:
+
+   • <none>
+
+  Skipped by .gitignore:
+  (Disable by passing --no-git-ignore)
+
+   • <all files not listed by `git ls-files` were skipped>
+
+  Skipped by .semgrepignore:
+  - https://semgrep.dev/docs/ignoring-files-folders-code/#understand-semgrep-defaults
+
+   • <none>
+
+  Skipped by --include patterns:
+
+   • <none>
+
+  Skipped by --exclude patterns:
+
+   • <none>
+
+  Files skipped due to insufficient read permissions:
+
+   • <none>
+
+  Skipped by limiting to files smaller than 1000000 bytes:
+  (Adjust with the --max-target-bytes flag)
+
+   • <none>
+
+  Partially analyzed due to parsing or internal Opengrep errors
+
+   • <none>
+
+2025-06-11 11:06:06,079 - semgrep.output - INFO - Some files were skipped or only partially analyzed.
+  Scan was limited to files tracked by git.
+
+Ran 488 rules on 23 files: 0 findings.
+2025-06-11 11:06:06,080 - semgrep.app.version - DEBUG - Version cache does not exist
+2025-06-11 11:06:06,080 - semgrep.app.version - DEBUG - Version cache does not exist
+2025-06-11 11:06:06,093 - semgrep.metrics - VERBOSE - Not sending pseudonymous metrics since metrics are configured to OFF and registry usage is False

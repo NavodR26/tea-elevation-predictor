@@ -1,0 +1,1825 @@
+2025-06-11 10:00:02,503 - src.google_sheets_manager - ERROR - Google Sheets authentication failed: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+2025-06-11 10:00:02,506 - __main__ - ERROR - Google Sheets connection error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 29, in _authenticate
+    if hasattr(st, 'secrets') and 'google_sheets' in st.secrets:
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 524, in __contains__
+    return key in self._parse()
+                  ^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 372, in _parse
+    raise StreamlitSecretNotFoundError(error_msg)
+streamlit.errors.StreamlitSecretNotFoundError: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 177, in connect_to_google_sheets
+    gs_manager = GoogleSheetsManager()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 23, in __init__
+    self._authenticate()
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 71, in _authenticate
+    raise Exception(f"Failed to authenticate with Google Sheets: {str(e)}")
+Exception: Failed to authenticate with Google Sheets: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+2025-06-11 10:00:02,607 - src.google_sheets_manager - ERROR - Google Sheets authentication failed: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+2025-06-11 10:00:02,609 - __main__ - ERROR - Google Sheets connection error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 29, in _authenticate
+    if hasattr(st, 'secrets') and 'google_sheets' in st.secrets:
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 524, in __contains__
+    return key in self._parse()
+                  ^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 372, in _parse
+    raise StreamlitSecretNotFoundError(error_msg)
+streamlit.errors.StreamlitSecretNotFoundError: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 177, in connect_to_google_sheets
+    gs_manager = GoogleSheetsManager()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 23, in __init__
+    self._authenticate()
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 71, in _authenticate
+    raise Exception(f"Failed to authenticate with Google Sheets: {str(e)}")
+Exception: Failed to authenticate with Google Sheets: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+2025-06-11 10:00:15,064 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:00:15,065 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:00:15,065 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:00:15,073 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:00:15,074 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:00:15,076 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:00:15,076 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:00:15,076 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:00:15,079 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:00:15,099 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:00:15,105 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:00:15,105 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:00:22,778 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:00:22,778 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:00:22,779 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:00:22,779 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:00:22,779 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:00:22,780 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:00:22,780 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:00:22,780 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:00:22,781 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:00:22,802 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:00:22,805 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:00:22,805 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:00:22,813 - src.data_preprocessor - INFO - Starting data cleaning with 1853 records
+2025-06-11 10:00:22,819 - src.data_preprocessor - INFO - After basic cleaning: 1853 records
+2025-06-11 10:00:22,823 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:00:22,824 - src.data_preprocessor - INFO - After duplicate removal: 1848 records
+2025-06-11 10:00:22,844 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:00:22,845 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:00:22,848 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:00:22,852 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:00:22,852 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:00:22,852 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:00:22,854 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:00:22,854 - src.data_preprocessor - INFO - After outlier handling: 1848 records
+2025-06-11 10:00:22,855 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:00:22,857 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:00:22,858 - src.data_preprocessor - INFO - After elevation filtering: 1848 records
+2025-06-11 10:00:22,859 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:00:22,878 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1848
+2025-06-11 10:00:22,881 - src.feature_engineer - INFO - Starting feature engineering with 1848 records
+2025-06-11 10:00:22,883 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:00:22,895 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:00:22,898 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:00:22,898 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:00:23,002 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:00:23,005 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:00:23,007 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:00:23,008 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:00:23,012 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:00:23,014 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:00:23,014 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:00:23,033 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:00:23,054 - src.feature_engineer - INFO - Created features for H: 186 records
+2025-06-11 10:00:23,078 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:00:23,090 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:00:23,092 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:00:23,128 - src.feature_engineer - INFO - Created features for M: 262 records
+2025-06-11 10:00:23,129 - src.data_preprocessor - INFO - Starting data cleaning with 1853 records
+2025-06-11 10:00:23,141 - src.data_preprocessor - INFO - After basic cleaning: 1853 records
+2025-06-11 10:00:23,155 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:00:23,156 - src.data_preprocessor - INFO - After duplicate removal: 1848 records
+2025-06-11 10:00:23,190 - src.feature_engineer - INFO - Created features for UH: 353 records
+2025-06-11 10:00:23,206 - src.data_preprocessor - INFO - After outlier handling: 1848 records
+2025-06-11 10:00:23,211 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:00:23,213 - src.data_preprocessor - INFO - After elevation filtering: 1848 records
+2025-06-11 10:00:23,217 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1848
+2025-06-11 10:00:23,217 - src.feature_engineer - INFO - Starting feature engineering with 1848 records
+2025-06-11 10:00:23,287 - src.feature_engineer - INFO - Created features for H: 186 records
+2025-06-11 10:00:23,310 - src.feature_engineer - INFO - Created features for UM: 353 records
+2025-06-11 10:00:23,360 - src.feature_engineer - INFO - Created features for M: 262 records
+2025-06-11 10:00:23,405 - src.feature_engineer - INFO - Created features for WH: 341 records
+2025-06-11 10:00:23,444 - src.feature_engineer - INFO - Created features for UH: 353 records
+2025-06-11 10:00:23,488 - src.feature_engineer - INFO - Created features for WM: 353 records
+2025-06-11 10:00:23,532 - src.feature_engineer - INFO - Created features for UM: 353 records
+2025-06-11 10:00:23,581 - src.feature_engineer - INFO - Created features for WH: 341 records
+2025-06-11 10:00:23,648 - src.feature_engineer - INFO - Created features for WM: 353 records
+2025-06-11 10:00:24,277 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:00:24,372 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:02:35,903 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:02:35,903 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:02:35,903 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:02:35,903 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:02:35,904 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:02:35,904 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:02:35,906 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:02:35,906 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:02:35,907 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:02:35,921 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:02:35,925 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:02:35,925 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:02:41,481 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:02:41,482 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:02:41,482 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:02:41,483 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:02:41,483 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:02:41,483 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:02:41,483 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:02:41,483 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:02:41,485 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:02:41,502 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:02:41,506 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:02:41,506 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:02:41,511 - src.data_preprocessor - INFO - Starting data cleaning with 1904 records
+2025-06-11 10:02:41,516 - src.data_preprocessor - INFO - After basic cleaning: 1904 records
+2025-06-11 10:02:41,520 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:02:41,521 - src.data_preprocessor - INFO - After duplicate removal: 1899 records
+2025-06-11 10:02:41,534 - src.data_preprocessor - INFO - After outlier handling: 1899 records
+2025-06-11 10:02:41,535 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:02:41,536 - src.data_preprocessor - INFO - After elevation filtering: 1899 records
+2025-06-11 10:02:41,538 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1899
+2025-06-11 10:02:41,538 - src.feature_engineer - INFO - Starting feature engineering with 1899 records
+2025-06-11 10:02:41,572 - src.feature_engineer - INFO - Created features for H: 193 records
+2025-06-11 10:02:41,608 - src.feature_engineer - INFO - Created features for M: 270 records
+2025-06-11 10:02:41,641 - src.feature_engineer - INFO - Created features for UH: 362 records
+2025-06-11 10:02:41,677 - src.feature_engineer - INFO - Created features for UM: 362 records
+2025-06-11 10:02:41,713 - src.feature_engineer - INFO - Created features for WH: 350 records
+2025-06-11 10:02:41,746 - src.feature_engineer - INFO - Created features for WM: 362 records
+2025-06-11 10:02:42,031 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:03:19,730 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:19,730 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:19,730 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:19,730 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:19,731 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:19,731 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:19,731 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:19,731 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:19,732 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:19,751 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:19,754 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:19,754 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:19,833 - src.simple_predictor - INFO - Training models for H with 193 records
+2025-06-11 10:03:19,837 - src.simple_predictor - ERROR - Training failed for H: could not convert string to float: 'Q1'
+2025-06-11 10:03:19,847 - __main__ - ERROR - Model training error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/simple_predictor.py", line 46, in train
+    X_scaled = self.scaler.fit_transform(X)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/base.py", line 892, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/base.py", line 1363, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 1638, in fit
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/validation.py", line 2954, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1053, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 757, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/pandas/core/generic.py", line 2168, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 456, in train_models
+    predictor.train(elevation_data, config.ENABLE_DEEP_TRAINING)
+  File "/home/runner/workspace/src/simple_predictor.py", line 69, in train
+    raise ValueError(f"Training failed for {self.elevation}: {str(e)}")
+ValueError: Training failed for H: could not convert string to float: 'Q1'
+
+2025-06-11 10:03:26,625 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:26,626 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:26,626 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:26,626 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:26,627 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:26,628 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:26,628 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:26,629 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:26,630 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:26,648 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:26,651 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:26,652 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:27,264 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:27,264 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:27,264 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:27,265 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:27,265 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:27,266 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:27,266 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:27,267 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:27,268 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:27,284 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:27,288 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:27,289 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:29,541 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:29,541 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:29,541 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:29,542 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:29,542 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:29,543 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:29,543 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:29,544 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:29,545 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:29,561 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:29,564 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:29,564 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:29,931 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:29,932 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:29,934 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:29,935 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:29,935 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:29,936 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:29,937 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:29,937 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:29,939 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:29,954 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:29,958 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:29,958 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:30,207 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:30,207 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:30,208 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:30,208 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:30,209 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:30,211 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:30,212 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:30,212 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:30,214 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:30,234 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:30,237 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:30,237 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:32,346 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:32,347 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:32,347 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:32,348 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:32,348 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:32,348 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:32,349 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:32,349 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:32,351 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:32,370 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:32,374 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:32,374 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:33,027 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:33,028 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:33,028 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:33,028 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:33,028 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:33,028 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:33,028 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:33,030 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:33,032 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:33,054 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:33,059 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:33,059 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:33,499 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:33,500 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:33,500 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:33,501 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:33,501 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:33,502 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:33,503 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:33,503 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:33,505 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:33,523 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:33,526 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:33,527 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:34,024 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:34,025 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:34,025 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:34,026 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:34,026 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:34,026 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:34,026 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:34,027 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:34,028 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:34,046 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:34,051 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:34,051 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:34,354 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:34,354 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:34,355 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:34,355 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:34,355 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:34,355 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:34,356 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:34,357 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:34,359 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:34,374 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:34,378 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:34,378 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:34,877 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:34,877 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:34,877 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:34,878 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:34,878 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:34,878 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:34,878 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:34,878 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:34,880 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:34,898 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:34,902 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:34,902 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:36,992 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:36,993 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:36,993 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:36,994 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:36,994 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:36,994 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:36,995 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:36,995 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:36,997 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:37,017 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:37,021 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:37,021 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:38,171 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:38,172 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:38,173 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:38,173 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:38,173 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:38,174 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:38,174 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:38,174 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:38,176 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:38,199 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:38,204 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:38,204 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:38,272 - src.simple_predictor - INFO - Training models for H with 193 records
+2025-06-11 10:03:38,280 - src.simple_predictor - ERROR - Training failed for H: could not convert string to float: 'Q1'
+2025-06-11 10:03:38,281 - __main__ - ERROR - Model training error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/simple_predictor.py", line 46, in train
+    X_scaled = self.scaler.fit_transform(X)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/base.py", line 892, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/base.py", line 1363, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 1638, in fit
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/validation.py", line 2954, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1053, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 757, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/pandas/core/generic.py", line 2168, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 456, in train_models
+    predictor.train(elevation_data, config.ENABLE_DEEP_TRAINING)
+  File "/home/runner/workspace/src/simple_predictor.py", line 69, in train
+    raise ValueError(f"Training failed for {self.elevation}: {str(e)}")
+ValueError: Training failed for H: could not convert string to float: 'Q1'
+
+2025-06-11 10:03:47,880 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:47,881 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:47,882 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:47,882 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:47,884 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:47,887 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:47,887 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:47,887 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:47,890 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:47,911 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:47,914 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:47,915 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:49,088 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:49,089 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:49,090 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:49,091 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:49,091 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:49,092 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:49,092 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:49,093 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:49,095 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:49,115 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:49,121 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:49,122 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:03:59,477 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:03:59,478 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:03:59,480 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:03:59,481 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:03:59,482 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:03:59,483 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:03:59,483 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:03:59,484 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:03:59,485 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:03:59,504 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:03:59,507 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:03:59,507 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:04:11,594 - src.data_loader - INFO - Successfully loaded CSV with 2903 records and 5 columns
+2025-06-11 10:04:11,594 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', ' Quantity', ' Average Price']
+2025-06-11 10:04:11,594 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:04:11,595 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:04:11,595 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:04:11,595 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:04:11,596 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:04:11,596 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:04:11,598 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 10:04:11,617 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 10:04:11,622 - src.data_loader - WARNING - Removed 999 records due to invalid ranges
+2025-06-11 10:04:11,623 - src.data_loader - INFO - Range validation completed. Valid records: 1904
+2025-06-11 10:04:11,682 - src.simple_predictor - INFO - Training models for H with 193 records
+2025-06-11 10:04:11,686 - src.simple_predictor - ERROR - Training failed for H: could not convert string to float: 'Q1'
+2025-06-11 10:04:11,688 - __main__ - ERROR - Model training error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/simple_predictor.py", line 46, in train
+    X_scaled = self.scaler.fit_transform(X)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/base.py", line 892, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/base.py", line 1363, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 1638, in fit
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/validation.py", line 2954, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1053, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 757, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/pandas/core/generic.py", line 2168, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 456, in train_models
+    predictor.train(elevation_data, config.ENABLE_DEEP_TRAINING)
+  File "/home/runner/workspace/src/simple_predictor.py", line 69, in train
+    raise ValueError(f"Training failed for {self.elevation}: {str(e)}")
+ValueError: Training failed for H: could not convert string to float: 'Q1'
+
+2025-06-11 10:09:12,946 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:09:12,947 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:09:12,947 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:09:12,948 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:09:12,949 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:09:12,949 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:09:12,950 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:09:12,950 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:09:12,953 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:09:12,971 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:09:12,974 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:09:12,976 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:09:17,840 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:09:17,840 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:09:17,841 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:09:17,841 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:09:17,841 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:09:17,842 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:09:17,842 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:09:17,843 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:09:17,845 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:09:17,864 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:09:17,869 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:09:17,870 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:09:17,876 - src.data_preprocessor - INFO - Starting data cleaning with 1853 records
+2025-06-11 10:09:17,880 - src.data_preprocessor - INFO - After basic cleaning: 1853 records
+2025-06-11 10:09:17,884 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:09:17,884 - src.data_preprocessor - INFO - After duplicate removal: 1848 records
+2025-06-11 10:09:17,895 - src.data_preprocessor - INFO - After outlier handling: 1848 records
+2025-06-11 10:09:17,897 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:09:17,897 - src.data_preprocessor - INFO - After elevation filtering: 1848 records
+2025-06-11 10:09:17,899 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1848
+2025-06-11 10:09:17,899 - src.feature_engineer - INFO - Starting feature engineering with 1848 records
+2025-06-11 10:09:17,935 - src.feature_engineer - INFO - Created features for H: 186 records
+2025-06-11 10:09:17,973 - src.feature_engineer - INFO - Created features for M: 262 records
+2025-06-11 10:09:18,017 - src.feature_engineer - INFO - Created features for UH: 353 records
+2025-06-11 10:09:18,052 - src.feature_engineer - INFO - Created features for UM: 353 records
+2025-06-11 10:09:18,090 - src.feature_engineer - INFO - Created features for WH: 341 records
+2025-06-11 10:09:18,127 - src.feature_engineer - INFO - Created features for WM: 353 records
+2025-06-11 10:09:18,403 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:09:35,690 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:09:35,691 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:09:35,691 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:09:35,691 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:09:35,692 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:09:35,692 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:09:35,693 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:09:35,694 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:09:35,695 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:09:35,712 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:09:35,715 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:09:35,715 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:09:38,394 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:09:38,394 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:09:38,395 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:09:38,395 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:09:38,396 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:09:38,397 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:09:38,397 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:09:38,398 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:09:38,400 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:09:38,416 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:09:38,420 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:09:38,421 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:09:39,791 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:09:39,793 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:09:39,794 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:09:39,794 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:09:39,794 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:09:39,794 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:09:39,795 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:09:39,795 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:09:39,797 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:09:39,814 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:09:39,818 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:09:39,819 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:09:51,330 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:09:51,330 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:09:51,331 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:09:51,331 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:09:51,331 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:09:51,331 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:09:51,331 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:09:51,332 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:09:51,333 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:09:51,353 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:09:51,358 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:09:51,367 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:09:51,445 - src.simple_predictor - INFO - Training models for H with 186 records
+2025-06-11 10:09:54,399 - src.simple_predictor - INFO - Ensemble weights for H: {'random_forest': np.float64(0.19618124129041348), 'gradient_boosting': np.float64(0.20058528081889748), 'ridge': np.float64(0.603233477890689)}
+2025-06-11 10:09:54,399 - src.simple_predictor - INFO - Training completed for H
+2025-06-11 10:09:54,469 - src.simple_predictor - INFO - Training models for M with 262 records
+2025-06-11 10:09:58,201 - src.simple_predictor - INFO - Ensemble weights for M: {'random_forest': np.float64(0.26608290621508063), 'gradient_boosting': np.float64(0.24785850688344718), 'ridge': np.float64(0.4860585869014721)}
+2025-06-11 10:09:58,201 - src.simple_predictor - INFO - Training completed for M
+2025-06-11 10:09:58,306 - src.simple_predictor - INFO - Training models for UH with 353 records
+2025-06-11 10:10:03,445 - src.simple_predictor - INFO - Ensemble weights for UH: {'random_forest': np.float64(0.3061991859634065), 'gradient_boosting': np.float64(0.2988328172288412), 'ridge': np.float64(0.39496799680775235)}
+2025-06-11 10:10:03,458 - src.simple_predictor - INFO - Training completed for UH
+2025-06-11 10:10:03,534 - src.simple_predictor - INFO - Training models for UM with 353 records
+2025-06-11 10:10:08,446 - src.simple_predictor - INFO - Ensemble weights for UM: {'random_forest': np.float64(0.3030935886857202), 'gradient_boosting': np.float64(0.30062780617741625), 'ridge': np.float64(0.39627860513686364)}
+2025-06-11 10:10:08,446 - src.simple_predictor - INFO - Training completed for UM
+2025-06-11 10:10:08,547 - src.simple_predictor - INFO - Training models for WH with 341 records
+2025-06-11 10:10:13,116 - src.simple_predictor - INFO - Ensemble weights for WH: {'random_forest': np.float64(0.3067362523447687), 'gradient_boosting': np.float64(0.2797847595189871), 'ridge': np.float64(0.4134789881362442)}
+2025-06-11 10:10:13,116 - src.simple_predictor - INFO - Training completed for WH
+2025-06-11 10:10:13,182 - src.simple_predictor - INFO - Training models for WM with 353 records
+2025-06-11 10:10:18,044 - src.simple_predictor - INFO - Ensemble weights for WM: {'random_forest': np.float64(0.26760120577813423), 'gradient_boosting': np.float64(0.2634651554020624), 'ridge': np.float64(0.4689336388198033)}
+2025-06-11 10:10:18,044 - src.simple_predictor - INFO - Training completed for WM
+2025-06-11 10:10:54,720 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:10:54,721 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:10:54,722 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:10:54,722 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:10:54,723 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:10:54,723 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:10:54,723 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:10:54,723 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:10:54,726 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:10:54,745 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:10:54,748 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:10:54,748 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:10:55,024 - __main__ - ERROR - Prediction generation error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 652, in make_predictions
+    display_predictions(predictions, confidence_intervals, next_year, next_sale)
+  File "/home/runner/workspace/app.py", line 675, in display_predictions
+    'LightGBM': format_currency(pred_result['lightgbm']),
+                                ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'lightgbm'
+
+2025-06-11 10:11:09,133 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:11:09,134 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:11:09,135 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:11:09,135 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:11:09,136 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:11:09,136 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:11:09,137 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:11:09,137 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:11:09,138 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:11:09,155 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:11:09,160 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:11:09,160 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:11:13,151 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:11:13,152 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:11:13,152 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:11:13,153 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:11:13,154 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:11:13,154 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:11:13,155 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:11:13,155 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:11:13,157 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:11:13,174 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:11:13,178 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:11:13,179 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:11:14,688 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:11:14,688 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:11:14,689 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:11:14,690 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:11:14,691 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:11:14,693 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:11:14,693 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:11:14,693 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:11:14,695 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:11:14,714 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:11:14,718 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:11:14,718 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:11:14,781 - __main__ - ERROR - Export error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 788, in export_results
+    'LightGBM_Prediction': pred_result['lightgbm'],
+                           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'lightgbm'
+
+2025-06-11 10:20:28,020 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:20:28,020 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:20:28,021 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:20:28,022 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:20:28,022 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:20:28,023 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:20:28,023 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:20:28,023 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:20:28,026 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:20:28,045 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:20:28,048 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:20:28,048 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:20:55,901 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:20:55,902 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:20:55,902 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:20:55,902 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:20:55,902 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:20:55,902 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:20:55,903 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:20:55,903 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:20:55,906 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:20:55,920 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:20:55,923 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:20:55,923 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:20:55,929 - src.data_preprocessor - INFO - Starting data cleaning with 1853 records
+2025-06-11 10:20:55,934 - src.data_preprocessor - INFO - After basic cleaning: 1853 records
+2025-06-11 10:20:55,940 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:20:55,940 - src.data_preprocessor - INFO - After duplicate removal: 1848 records
+2025-06-11 10:20:55,951 - src.data_preprocessor - INFO - After outlier handling: 1848 records
+2025-06-11 10:20:55,952 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:20:55,952 - src.data_preprocessor - INFO - After elevation filtering: 1848 records
+2025-06-11 10:20:55,954 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1848
+2025-06-11 10:20:55,955 - src.feature_engineer - INFO - Starting feature engineering with 1848 records
+2025-06-11 10:20:55,992 - src.feature_engineer - INFO - Created features for H: 186 records
+2025-06-11 10:20:56,025 - src.feature_engineer - INFO - Created features for M: 262 records
+2025-06-11 10:20:56,059 - src.feature_engineer - INFO - Created features for UH: 353 records
+2025-06-11 10:20:56,096 - src.feature_engineer - INFO - Created features for UM: 353 records
+2025-06-11 10:20:56,132 - src.feature_engineer - INFO - Created features for WH: 341 records
+2025-06-11 10:20:56,170 - src.feature_engineer - INFO - Created features for WM: 353 records
+2025-06-11 10:20:56,446 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:21:14,408 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:21:14,409 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:21:14,409 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:21:14,409 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:21:14,410 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:21:14,410 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:21:14,411 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:21:14,411 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:21:14,413 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:21:14,428 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:21:14,431 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:21:14,431 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:21:14,504 - src.simple_predictor - INFO - Training models for H with 186 records
+2025-06-11 10:21:17,243 - src.simple_predictor - INFO - Ensemble weights for H: {'random_forest': np.float64(0.19618124129041345), 'gradient_boosting': np.float64(0.2005852808188975), 'ridge': np.float64(0.6032334778906892)}
+2025-06-11 10:21:17,243 - src.simple_predictor - INFO - Training completed for H
+2025-06-11 10:21:17,339 - src.simple_predictor - INFO - Training models for M with 262 records
+2025-06-11 10:21:21,065 - src.simple_predictor - INFO - Ensemble weights for M: {'random_forest': np.float64(0.2660829062150807), 'gradient_boosting': np.float64(0.24785850688344718), 'ridge': np.float64(0.4860585869014721)}
+2025-06-11 10:21:21,065 - src.simple_predictor - INFO - Training completed for M
+2025-06-11 10:21:21,125 - src.simple_predictor - INFO - Training models for UH with 353 records
+2025-06-11 10:21:25,874 - src.simple_predictor - INFO - Ensemble weights for UH: {'random_forest': np.float64(0.3061991859634067), 'gradient_boosting': np.float64(0.2988328172288411), 'ridge': np.float64(0.3949679968077522)}
+2025-06-11 10:21:25,879 - src.simple_predictor - INFO - Training completed for UH
+2025-06-11 10:21:25,963 - src.simple_predictor - INFO - Training models for UM with 353 records
+2025-06-11 10:21:30,926 - src.simple_predictor - INFO - Ensemble weights for UM: {'random_forest': np.float64(0.3030935886857201), 'gradient_boosting': np.float64(0.30062780617741625), 'ridge': np.float64(0.39627860513686364)}
+2025-06-11 10:21:30,926 - src.simple_predictor - INFO - Training completed for UM
+2025-06-11 10:21:30,982 - src.simple_predictor - INFO - Training models for WH with 341 records
+2025-06-11 10:21:36,162 - src.simple_predictor - INFO - Ensemble weights for WH: {'random_forest': np.float64(0.3067362523447688), 'gradient_boosting': np.float64(0.2797847595189871), 'ridge': np.float64(0.4134789881362442)}
+2025-06-11 10:21:36,163 - src.simple_predictor - INFO - Training completed for WH
+2025-06-11 10:21:36,245 - src.simple_predictor - INFO - Training models for WM with 353 records
+2025-06-11 10:21:41,327 - src.simple_predictor - INFO - Ensemble weights for WM: {'random_forest': np.float64(0.2676012057781343), 'gradient_boosting': np.float64(0.2634651554020624), 'ridge': np.float64(0.4689336388198033)}
+2025-06-11 10:21:41,327 - src.simple_predictor - INFO - Training completed for WM
+2025-06-11 10:21:53,361 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:21:53,362 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:21:53,362 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:21:53,362 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:21:53,366 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:21:53,367 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:21:53,367 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:21:53,367 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:21:53,368 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:21:53,389 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:21:53,392 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:21:53,393 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:21:53,703 - src.visualization - ERROR - Error creating predictions plot: 'lightgbm'
+2025-06-11 10:21:53,721 - __main__ - ERROR - Prediction generation error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 652, in make_predictions
+    display_predictions(predictions, confidence_intervals, next_year, next_sale)
+  File "/home/runner/workspace/app.py", line 709, in display_predictions
+    model_preds = [pred_result[model] for model in models]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/app.py", line 709, in <listcomp>
+    model_preds = [pred_result[model] for model in models]
+                   ~~~~~~~~~~~^^^^^^^
+KeyError: 'lightgbm'
+
+2025-06-11 10:22:11,680 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:11,680 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:11,681 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:11,681 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:11,681 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:11,681 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:11,681 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:11,682 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:11,684 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:11,699 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:11,703 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:11,704 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:16,448 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:16,448 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:16,449 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:16,449 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:16,449 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:16,450 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:16,450 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:16,450 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:16,452 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:16,471 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:16,475 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:16,475 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:19,339 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:19,340 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:19,342 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:19,342 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:19,343 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:19,344 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:19,344 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:19,344 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:19,346 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:19,362 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:19,365 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:19,365 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:19,425 - src.google_sheets_manager - ERROR - Google Sheets authentication failed: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+2025-06-11 10:22:19,428 - __main__ - ERROR - Google Sheets export error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 29, in _authenticate
+    if hasattr(st, 'secrets') and 'google_sheets' in st.secrets:
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 524, in __contains__
+    return key in self._parse()
+                  ^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 372, in _parse
+    raise StreamlitSecretNotFoundError(error_msg)
+streamlit.errors.StreamlitSecretNotFoundError: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 881, in export_google_sheets
+    gs_manager = GoogleSheetsManager()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 23, in __init__
+    self._authenticate()
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 71, in _authenticate
+    raise Exception(f"Failed to authenticate with Google Sheets: {str(e)}")
+Exception: Failed to authenticate with Google Sheets: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+2025-06-11 10:22:22,146 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:22,147 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:22,147 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:22,147 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:22,148 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:22,148 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:22,148 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:22,149 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:22,150 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:22,167 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:22,172 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:22,173 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:23,535 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:23,535 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:23,536 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:23,536 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:23,536 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:23,536 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:23,536 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:23,536 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:23,537 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:23,557 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:23,559 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:23,560 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:29,400 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:29,401 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:29,401 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:29,401 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:29,401 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:29,401 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:29,402 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:29,402 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:29,403 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:29,420 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:29,424 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:29,425 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:46,348 - src.data_loader - INFO - Successfully loaded CSV with 2831 records and 5 columns
+2025-06-11 10:22:46,349 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', ' Average Price ']
+2025-06-11 10:22:46,349 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:22:46,349 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:22:46,349 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:22:46,352 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:22:46,353 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:22:46,353 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:22:46,357 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2831, 5)
+2025-06-11 10:22:46,378 - src.data_loader - INFO - Data type validation completed. Remaining records: 2831
+2025-06-11 10:22:46,383 - src.data_loader - WARNING - Removed 978 records due to invalid ranges
+2025-06-11 10:22:46,383 - src.data_loader - INFO - Range validation completed. Valid records: 1853
+2025-06-11 10:22:46,733 - src.visualization - ERROR - Error creating predictions plot: 'lightgbm'
+2025-06-11 10:22:46,740 - __main__ - ERROR - Prediction generation error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 652, in make_predictions
+    display_predictions(predictions, confidence_intervals, next_year, next_sale)
+  File "/home/runner/workspace/app.py", line 709, in display_predictions
+    model_preds = [pred_result[model] for model in models]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/app.py", line 709, in <listcomp>
+    model_preds = [pred_result[model] for model in models]
+                   ~~~~~~~~~~~^^^^^^^
+KeyError: 'lightgbm'
+
+2025-06-11 10:31:28,855 - src.google_sheets_manager - ERROR - Google Sheets authentication failed: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+2025-06-11 10:31:28,856 - __main__ - ERROR - Google Sheets connection error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 29, in _authenticate
+    if hasattr(st, 'secrets') and 'google_sheets' in st.secrets:
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 524, in __contains__
+    return key in self._parse()
+                  ^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/secrets.py", line 372, in _parse
+    raise StreamlitSecretNotFoundError(error_msg)
+streamlit.errors.StreamlitSecretNotFoundError: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 177, in connect_to_google_sheets
+    gs_manager = GoogleSheetsManager()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 23, in __init__
+    self._authenticate()
+  File "/home/runner/workspace/src/google_sheets_manager.py", line 71, in _authenticate
+    raise Exception(f"Failed to authenticate with Google Sheets: {str(e)}")
+Exception: Failed to authenticate with Google Sheets: No secrets found. Valid paths for a secrets.toml file or secret directories are: /home/runner/.streamlit/secrets.toml, /home/runner/workspace/.streamlit/secrets.toml
+
+2025-06-11 10:31:54,575 - src.data_loader - INFO - Successfully loaded XLSX with 2855 records and 5 columns
+2025-06-11 10:31:54,576 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:31:54,577 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:31:54,578 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:31:54,578 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:31:54,579 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:31:54,579 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:31:54,579 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:31:54,580 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2855, 5)
+2025-06-11 10:31:54,603 - src.data_loader - INFO - Data type validation completed. Remaining records: 2855
+2025-06-11 10:31:54,606 - src.data_loader - WARNING - Removed 987 records due to invalid ranges
+2025-06-11 10:31:54,606 - src.data_loader - INFO - Range validation completed. Valid records: 1868
+2025-06-11 10:38:27,865 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:38:27,866 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy ', 'Average Price']
+2025-06-11 10:38:27,866 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy', 'Average Price']
+2025-06-11 10:38:27,867 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:38:27,867 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:38:27,867 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:38:27,867 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:38:27,867 - src.data_loader - ERROR - Could not find columns for: ['quantity']. Available columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy', 'Average Price']
+2025-06-11 10:38:27,868 - src.data_loader - ERROR - Column validation/mapping failed: Could not find columns for: ['quantity']. Available columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy', 'Average Price']
+2025-06-11 10:38:27,869 - src.data_loader - ERROR - Error loading file: Could not find columns for: ['quantity']. Available columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy', 'Average Price']
+2025-06-11 10:38:27,873 - __main__ - ERROR - CSV upload error: Traceback (most recent call last):
+  File "/home/runner/workspace/src/data_loader.py", line 36, in load_file
+    return self._validate_and_map_columns(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/src/data_loader.py", line 76, in _validate_and_map_columns
+    raise ValueError(error_msg)
+ValueError: Could not find columns for: ['quantity']. Available columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy', 'Average Price']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 122, in handle_csv_upload
+    df = data_loader.load_file(uploaded_file)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/src/data_loader.py", line 40, in load_file
+    raise ValueError(f"Failed to load file: {str(e)}")
+ValueError: Failed to load file: Could not find columns for: ['quantity']. Available columns: ['Year', 'Sale Number', 'Elevation', 'Quantitiy', 'Average Price']
+
+2025-06-11 10:39:17,070 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:39:17,071 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:39:17,071 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:39:17,071 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:39:17,072 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:39:17,072 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:39:17,072 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:39:17,073 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:39:17,074 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:39:17,091 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:39:17,094 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:39:17,094 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:39:29,935 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:39:29,935 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:39:29,935 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:39:29,935 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:39:29,935 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:39:29,936 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:39:29,936 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:39:29,936 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:39:29,937 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:39:29,955 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:39:29,960 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:39:29,961 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:39:29,967 - src.data_preprocessor - INFO - Starting data cleaning with 1898 records
+2025-06-11 10:39:29,972 - src.data_preprocessor - INFO - After basic cleaning: 1898 records
+2025-06-11 10:39:29,976 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:39:29,977 - src.data_preprocessor - INFO - After duplicate removal: 1893 records
+2025-06-11 10:39:29,989 - src.data_preprocessor - INFO - After outlier handling: 1893 records
+2025-06-11 10:39:29,990 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:39:29,991 - src.data_preprocessor - INFO - After elevation filtering: 1893 records
+2025-06-11 10:39:29,993 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1893
+2025-06-11 10:39:29,993 - src.feature_engineer - INFO - Starting feature engineering with 1893 records
+2025-06-11 10:39:30,029 - src.feature_engineer - INFO - Created features for H: 192 records
+2025-06-11 10:39:30,065 - src.feature_engineer - INFO - Created features for M: 269 records
+2025-06-11 10:39:30,102 - src.feature_engineer - INFO - Created features for UH: 361 records
+2025-06-11 10:39:30,140 - src.feature_engineer - INFO - Created features for UM: 361 records
+2025-06-11 10:39:30,180 - src.feature_engineer - INFO - Created features for WH: 349 records
+2025-06-11 10:39:30,217 - src.feature_engineer - INFO - Created features for WM: 361 records
+2025-06-11 10:39:30,489 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:39:49,977 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:39:49,979 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:39:49,980 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:39:49,980 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:39:49,981 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:39:49,981 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:39:49,982 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:39:49,982 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:39:49,984 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:39:50,008 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:39:50,012 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:39:50,012 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:40:03,525 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:40:03,526 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:40:03,526 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:40:03,526 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:40:03,526 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:40:03,526 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:40:03,527 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:40:03,527 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:40:03,528 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:40:03,545 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:40:03,548 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:40:03,549 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:40:07,708 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:40:07,709 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:40:07,710 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:40:07,710 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:40:07,710 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:40:07,710 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:40:07,711 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:40:07,711 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:40:07,713 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:40:07,730 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:40:07,734 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:40:07,742 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:40:07,806 - src.simple_predictor - INFO - Training models for H with 192 records
+2025-06-11 10:40:11,211 - src.simple_predictor - INFO - Ensemble weights for H: {'random_forest': np.float64(0.22918175661243034), 'gradient_boosting': np.float64(0.2118313253616187), 'ridge': np.float64(0.5589869180259509)}
+2025-06-11 10:40:11,211 - src.simple_predictor - INFO - Training completed for H
+2025-06-11 10:40:11,328 - src.simple_predictor - INFO - Training models for M with 269 records
+2025-06-11 10:40:15,979 - src.simple_predictor - INFO - Ensemble weights for M: {'random_forest': np.float64(0.2530232674445363), 'gradient_boosting': np.float64(0.22171369216696946), 'ridge': np.float64(0.5252630403884943)}
+2025-06-11 10:40:15,981 - src.simple_predictor - INFO - Training completed for M
+2025-06-11 10:40:16,048 - src.simple_predictor - INFO - Training models for UH with 361 records
+2025-06-11 10:40:22,181 - src.simple_predictor - INFO - Ensemble weights for UH: {'random_forest': np.float64(0.3515941230023245), 'gradient_boosting': np.float64(0.39623791490384097), 'ridge': np.float64(0.2521679620938346)}
+2025-06-11 10:40:22,182 - src.simple_predictor - INFO - Training completed for UH
+2025-06-11 10:40:22,271 - src.simple_predictor - INFO - Training models for UM with 361 records
+2025-06-11 10:40:28,356 - src.simple_predictor - INFO - Ensemble weights for UM: {'random_forest': np.float64(0.33431001438368396), 'gradient_boosting': np.float64(0.41001955621023756), 'ridge': np.float64(0.2556704294060785)}
+2025-06-11 10:40:28,357 - src.simple_predictor - INFO - Training completed for UM
+2025-06-11 10:40:28,415 - src.simple_predictor - INFO - Training models for WH with 349 records
+2025-06-11 10:40:34,135 - src.simple_predictor - INFO - Ensemble weights for WH: {'random_forest': np.float64(0.3715534211978554), 'gradient_boosting': np.float64(0.3477854117389463), 'ridge': np.float64(0.2806611670631984)}
+2025-06-11 10:40:34,138 - src.simple_predictor - INFO - Training completed for WH
+2025-06-11 10:40:34,182 - src.simple_predictor - INFO - Training models for WM with 361 records
+2025-06-11 10:40:40,247 - src.simple_predictor - INFO - Ensemble weights for WM: {'random_forest': np.float64(0.32724204744399865), 'gradient_boosting': np.float64(0.330579477975792), 'ridge': np.float64(0.3421784745802092)}
+2025-06-11 10:40:40,247 - src.simple_predictor - INFO - Training completed for WM
+2025-06-11 10:41:00,433 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:41:00,434 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:41:00,434 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:41:00,435 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:41:00,435 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:41:00,436 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:41:00,436 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:41:00,437 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:41:00,438 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:41:00,454 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:41:00,457 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:41:00,457 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:41:00,757 - src.visualization - ERROR - Error creating predictions plot: 'lightgbm'
+2025-06-11 10:41:00,760 - __main__ - ERROR - Prediction generation error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 652, in make_predictions
+    display_predictions(predictions, confidence_intervals, next_year, next_sale)
+  File "/home/runner/workspace/app.py", line 709, in display_predictions
+    model_preds = [pred_result[model] for model in models]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/app.py", line 709, in <listcomp>
+    model_preds = [pred_result[model] for model in models]
+                   ~~~~~~~~~~~^^^^^^^
+KeyError: 'lightgbm'
+
+2025-06-11 10:46:37,209 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:46:37,210 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:46:37,210 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:46:37,211 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:46:37,211 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:46:37,211 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:46:37,212 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:46:37,212 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:46:37,214 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:46:37,231 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:46:37,233 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:46:37,234 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:47:05,762 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:47:05,763 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:47:05,764 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:47:05,768 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:47:05,769 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:47:05,769 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:47:05,770 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:47:05,771 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:47:05,774 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:47:05,794 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:47:05,797 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:47:05,798 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:47:05,805 - src.data_preprocessor - INFO - Starting data cleaning with 1898 records
+2025-06-11 10:47:05,812 - src.data_preprocessor - INFO - After basic cleaning: 1898 records
+2025-06-11 10:47:05,816 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:47:05,817 - src.data_preprocessor - INFO - After duplicate removal: 1893 records
+2025-06-11 10:47:05,833 - src.data_preprocessor - INFO - After outlier handling: 1893 records
+2025-06-11 10:47:05,835 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:47:05,836 - src.data_preprocessor - INFO - After elevation filtering: 1893 records
+2025-06-11 10:47:05,839 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1893
+2025-06-11 10:47:05,840 - src.feature_engineer - INFO - Starting feature engineering with 1893 records
+2025-06-11 10:47:05,882 - src.feature_engineer - INFO - Created features for H: 192 records
+2025-06-11 10:47:05,917 - src.feature_engineer - INFO - Created features for M: 269 records
+2025-06-11 10:47:05,962 - src.feature_engineer - INFO - Created features for UH: 361 records
+2025-06-11 10:47:06,007 - src.feature_engineer - INFO - Created features for UM: 361 records
+2025-06-11 10:47:06,055 - src.feature_engineer - INFO - Created features for WH: 349 records
+2025-06-11 10:47:06,095 - src.feature_engineer - INFO - Created features for WM: 361 records
+2025-06-11 10:47:06,418 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:48:03,937 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:48:03,938 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:48:03,939 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:48:03,939 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:48:03,939 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:48:03,940 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:48:03,940 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:48:03,940 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:48:03,942 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:48:03,957 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:48:03,960 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:48:03,961 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:48:44,247 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:48:44,247 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:48:44,247 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:48:44,248 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:48:44,248 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:48:44,248 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:48:44,248 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:48:44,248 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:48:44,250 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:48:44,273 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:48:44,278 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:48:44,278 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:48:44,289 - src.data_preprocessor - INFO - Starting data cleaning with 1898 records
+2025-06-11 10:48:44,297 - src.data_preprocessor - INFO - After basic cleaning: 1898 records
+2025-06-11 10:48:44,304 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:48:44,304 - src.data_preprocessor - INFO - After duplicate removal: 1893 records
+2025-06-11 10:48:44,323 - src.data_preprocessor - INFO - After outlier handling: 1893 records
+2025-06-11 10:48:44,326 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:48:44,327 - src.data_preprocessor - INFO - After elevation filtering: 1893 records
+2025-06-11 10:48:44,329 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1893
+2025-06-11 10:48:44,330 - src.feature_engineer - INFO - Starting feature engineering with 1893 records
+2025-06-11 10:48:44,381 - src.feature_engineer - INFO - Created features for H: 192 records
+2025-06-11 10:48:44,429 - src.feature_engineer - INFO - Created features for M: 269 records
+2025-06-11 10:48:44,468 - src.feature_engineer - INFO - Created features for UH: 361 records
+2025-06-11 10:48:44,512 - src.feature_engineer - INFO - Created features for UM: 361 records
+2025-06-11 10:48:44,552 - src.feature_engineer - INFO - Created features for WH: 349 records
+2025-06-11 10:48:44,605 - src.feature_engineer - INFO - Created features for WM: 361 records
+2025-06-11 10:48:44,923 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:49:39,449 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:49:39,451 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:49:39,453 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:49:39,472 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:49:39,475 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:49:39,476 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:50:28,315 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:50:28,317 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:50:28,317 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:50:28,318 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:50:28,318 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:50:28,319 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:50:28,319 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:50:28,320 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:50:28,321 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:50:28,338 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:50:28,341 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:50:28,341 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:50:48,697 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:50:48,697 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:50:48,697 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:50:48,698 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:50:48,699 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:50:48,699 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:50:48,700 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:50:48,700 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:50:48,702 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:50:48,718 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:50:48,721 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:50:48,721 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:50:48,728 - src.data_preprocessor - INFO - Starting data cleaning with 1898 records
+2025-06-11 10:50:48,732 - src.data_preprocessor - INFO - After basic cleaning: 1898 records
+2025-06-11 10:50:48,735 - src.data_preprocessor - INFO - Removed 5 duplicate records
+2025-06-11 10:50:48,735 - src.data_preprocessor - INFO - After duplicate removal: 1893 records
+2025-06-11 10:50:48,748 - src.data_preprocessor - INFO - After outlier handling: 1893 records
+2025-06-11 10:50:48,750 - src.data_preprocessor - INFO - Retained 6 elevations with sufficient data
+2025-06-11 10:50:48,750 - src.data_preprocessor - INFO - After elevation filtering: 1893 records
+2025-06-11 10:50:48,753 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 1893
+2025-06-11 10:50:48,754 - src.feature_engineer - INFO - Starting feature engineering with 1893 records
+2025-06-11 10:50:48,800 - src.feature_engineer - INFO - Created features for H: 192 records
+2025-06-11 10:50:48,837 - src.feature_engineer - INFO - Created features for M: 269 records
+2025-06-11 10:50:48,873 - src.feature_engineer - INFO - Created features for UH: 361 records
+2025-06-11 10:50:48,911 - src.feature_engineer - INFO - Created features for UM: 361 records
+2025-06-11 10:50:48,945 - src.feature_engineer - INFO - Created features for WH: 349 records
+2025-06-11 10:50:48,993 - src.feature_engineer - INFO - Created features for WM: 361 records
+2025-06-11 10:50:49,317 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:51:23,145 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:23,146 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:23,147 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:23,147 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:23,148 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:23,148 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:23,149 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:23,149 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:23,151 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:23,168 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:23,172 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:23,172 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:42,083 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:42,084 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:42,084 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:42,085 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:42,085 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:42,085 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:42,086 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:42,086 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:42,087 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:42,108 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:42,110 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:42,111 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:42,531 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:42,539 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:42,550 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:42,555 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:42,590 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:42,590 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:42,591 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:42,591 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:42,593 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:42,640 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:42,698 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:42,718 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:42,718 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:42,722 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:42,856 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:42,878 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:42,893 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:42,902 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:42,910 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:42,919 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:42,924 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:43,055 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:43,071 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:43,092 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:43,105 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:43,105 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:43,108 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:43,120 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:43,127 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:43,127 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:43,139 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:43,161 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:43,161 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:43,421 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:43,453 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:43,454 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:43,455 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:43,455 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:43,481 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:43,481 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:43,484 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:43,492 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:43,493 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:43,503 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:43,543 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:43,550 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:43,723 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:43,728 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:43,729 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:43,738 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:43,739 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:43,751 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:43,771 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:43,782 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:43,913 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:43,918 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:43,930 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:44,015 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:44,016 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:44,016 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:44,017 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:44,017 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:44,017 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:44,017 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:44,018 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:44,020 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:44,040 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:44,068 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:44,070 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:44,228 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:44,251 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:44,252 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:44,489 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:44,490 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:44,491 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:44,492 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:44,492 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:44,492 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:44,493 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:44,493 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:44,495 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:44,519 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:44,522 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:44,523 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:45,980 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:45,981 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:45,981 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:45,982 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:45,982 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:45,983 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:45,983 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:45,983 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:45,985 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:46,010 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:46,015 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:46,016 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:46,317 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:46,318 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:46,318 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:46,319 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:46,319 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:46,320 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:46,320 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:46,320 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:46,322 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:46,338 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:46,341 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:46,341 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:46,889 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:46,891 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:46,891 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:46,892 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:46,892 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:46,893 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:46,893 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:46,894 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:46,897 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:46,925 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:46,928 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:46,928 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:48,624 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:48,624 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:48,625 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:48,626 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:48,626 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:48,626 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:48,627 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:48,627 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:48,632 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:48,648 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:48,651 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:48,651 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:50,089 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:50,090 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:50,090 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:50,091 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:50,091 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:50,092 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:50,092 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:50,092 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:50,094 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:50,116 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:50,119 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:50,119 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:50,519 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:50,519 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:50,520 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:50,520 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:50,521 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:50,521 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:50,521 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:50,521 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:50,523 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:50,543 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:50,547 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:50,547 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:57,245 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:51:57,246 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:57,246 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:51:57,246 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:51:57,247 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:51:57,248 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:51:57,248 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:51:57,248 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:51:57,249 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:51:57,266 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:51:57,269 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:51:57,269 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:51:57,331 - src.simple_predictor - INFO - Training models for H with 192 records
+2025-06-11 10:52:01,076 - src.simple_predictor - INFO - Ensemble weights for H: {'random_forest': np.float64(0.27294133230042594), 'gradient_boosting': np.float64(0.26794606018075656), 'ridge': np.float64(0.4591126075188175)}
+2025-06-11 10:52:01,076 - src.simple_predictor - INFO - Training completed for H
+2025-06-11 10:52:01,111 - src.simple_predictor - INFO - Training models for M with 269 records
+2025-06-11 10:52:06,497 - src.simple_predictor - INFO - Ensemble weights for M: {'random_forest': np.float64(0.2943796252630863), 'gradient_boosting': np.float64(0.27295281123005527), 'ridge': np.float64(0.4326675635068585)}
+2025-06-11 10:52:06,497 - src.simple_predictor - INFO - Training completed for M
+2025-06-11 10:52:06,549 - src.simple_predictor - INFO - Training models for UH with 361 records
+2025-06-11 10:52:13,224 - src.simple_predictor - INFO - Ensemble weights for UH: {'random_forest': np.float64(0.3488763285309797), 'gradient_boosting': np.float64(0.2962137150574015), 'ridge': np.float64(0.3549099564116186)}
+2025-06-11 10:52:13,225 - src.simple_predictor - INFO - Training completed for UH
+2025-06-11 10:52:13,298 - src.simple_predictor - INFO - Training models for UM with 361 records
+2025-06-11 10:52:20,438 - src.simple_predictor - INFO - Ensemble weights for UM: {'random_forest': np.float64(0.31261400912067), 'gradient_boosting': np.float64(0.2973206604269101), 'ridge': np.float64(0.39006533045241987)}
+2025-06-11 10:52:20,440 - src.simple_predictor - INFO - Training completed for UM
+2025-06-11 10:52:20,527 - src.simple_predictor - INFO - Training models for WH with 349 records
+2025-06-11 10:52:27,065 - src.simple_predictor - INFO - Ensemble weights for WH: {'random_forest': np.float64(0.33695098697401543), 'gradient_boosting': np.float64(0.3157415276107468), 'ridge': np.float64(0.34730748541523776)}
+2025-06-11 10:52:27,066 - src.simple_predictor - INFO - Training completed for WH
+2025-06-11 10:52:27,142 - src.simple_predictor - INFO - Training models for WM with 361 records
+2025-06-11 10:52:34,131 - src.simple_predictor - INFO - Ensemble weights for WM: {'random_forest': np.float64(0.3234807801855224), 'gradient_boosting': np.float64(0.28782306966317583), 'ridge': np.float64(0.3886961501513018)}
+2025-06-11 10:52:34,140 - src.simple_predictor - INFO - Training completed for WM
+2025-06-11 10:53:03,094 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:53:03,095 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:53:03,095 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:53:03,095 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:53:03,096 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:53:03,097 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:53:03,097 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:53:03,098 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:53:03,100 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:53:03,123 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:53:03,127 - src.data_loader - WARNING - Removed 997 records due to invalid ranges
+2025-06-11 10:53:03,127 - src.data_loader - INFO - Range validation completed. Valid records: 1898
+2025-06-11 10:56:29,255 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:56:29,256 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:29,256 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:29,256 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:56:29,257 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:56:29,257 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:56:29,257 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:56:29,258 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:56:29,260 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:56:29,277 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:56:29,279 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:56:35,254 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:56:35,256 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:35,256 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:35,257 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:56:35,257 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:56:35,258 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:56:35,258 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:56:35,258 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:56:35,259 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:56:35,280 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:56:35,284 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:56:35,296 - src.data_preprocessor - INFO - Starting data cleaning with 2895 records
+2025-06-11 10:56:35,305 - src.data_preprocessor - INFO - After basic cleaning: 2895 records
+2025-06-11 10:56:35,309 - src.data_preprocessor - INFO - Removed 7 duplicate records
+2025-06-11 10:56:35,310 - src.data_preprocessor - INFO - After duplicate removal: 2888 records
+2025-06-11 10:56:35,327 - src.data_preprocessor - INFO - After outlier handling: 2888 records
+2025-06-11 10:56:35,330 - src.data_preprocessor - INFO - Retained 8 elevations with sufficient data
+2025-06-11 10:56:35,330 - src.data_preprocessor - INFO - After elevation filtering: 2888 records
+2025-06-11 10:56:35,333 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 2888
+2025-06-11 10:56:35,334 - src.feature_engineer - INFO - Starting feature engineering with 2888 records
+2025-06-11 10:56:35,376 - src.feature_engineer - INFO - Created features for BT: 361 records
+2025-06-11 10:56:35,419 - src.feature_engineer - INFO - Created features for H: 361 records
+2025-06-11 10:56:35,462 - src.feature_engineer - INFO - Created features for L: 361 records
+2025-06-11 10:56:35,503 - src.feature_engineer - INFO - Created features for M: 361 records
+2025-06-11 10:56:35,539 - src.feature_engineer - INFO - Created features for UH: 361 records
+2025-06-11 10:56:35,581 - src.feature_engineer - INFO - Created features for UM: 361 records
+2025-06-11 10:56:35,617 - src.feature_engineer - INFO - Created features for WH: 361 records
+2025-06-11 10:56:35,654 - src.feature_engineer - INFO - Created features for WM: 361 records
+2025-06-11 10:56:35,979 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:56:36,484 - __main__ - ERROR - Model training setup error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 432, in handle_model_training
+    min_records = st.number_input(
+                  ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 344, in number_input
+    return self._number_input(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 480, in _number_input
+    raise StreamlitValueBelowMinError(value=value, min_value=min_value)
+streamlit.errors.StreamlitValueBelowMinError: The `value` 5 is less than the `min_value` 10.
+
+2025-06-11 10:56:55,131 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:56:55,131 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:55,132 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:55,132 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:56:55,133 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:56:55,133 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:56:55,133 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:56:55,134 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:56:55,136 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:56:55,151 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:56:55,153 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:56:55,204 - __main__ - ERROR - Model training setup error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 432, in handle_model_training
+    min_records = st.number_input(
+                  ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 344, in number_input
+    return self._number_input(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 480, in _number_input
+    raise StreamlitValueBelowMinError(value=value, min_value=min_value)
+streamlit.errors.StreamlitValueBelowMinError: The `value` 5 is less than the `min_value` 10.
+
+2025-06-11 10:56:56,604 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:56:56,605 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:56,605 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:56,606 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:56:56,606 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:56:56,606 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:56:56,606 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:56:56,607 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:56:56,608 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:56:56,628 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:56:56,631 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:56:56,686 - __main__ - ERROR - Model training setup error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 432, in handle_model_training
+    min_records = st.number_input(
+                  ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 344, in number_input
+    return self._number_input(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 480, in _number_input
+    raise StreamlitValueBelowMinError(value=value, min_value=min_value)
+streamlit.errors.StreamlitValueBelowMinError: The `value` 5 is less than the `min_value` 10.
+
+2025-06-11 10:56:57,883 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:56:57,883 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:57,883 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:56:57,884 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:56:57,884 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:56:57,885 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:56:57,885 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:56:57,885 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:56:57,887 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:56:57,902 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:56:57,905 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:56:57,970 - __main__ - ERROR - Model training setup error: Traceback (most recent call last):
+  File "/home/runner/workspace/app.py", line 432, in handle_model_training
+    min_records = st.number_input(
+                  ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 344, in number_input
+    return self._number_input(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/number_input.py", line 480, in _number_input
+    raise StreamlitValueBelowMinError(value=value, min_value=min_value)
+streamlit.errors.StreamlitValueBelowMinError: The `value` 5 is less than the `min_value` 10.
+
+2025-06-11 10:58:48,072 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:58:48,072 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:58:48,072 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:58:48,073 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:58:48,074 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:58:48,074 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:58:48,074 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:58:48,075 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:58:48,078 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:58:48,106 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:58:48,110 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:58:51,690 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:58:51,691 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:58:51,692 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:58:51,692 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:58:51,693 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:58:51,693 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:58:51,693 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:58:51,693 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:58:51,694 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:58:51,709 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:58:51,712 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:58:51,718 - src.data_preprocessor - INFO - Starting data cleaning with 2895 records
+2025-06-11 10:58:51,723 - src.data_preprocessor - INFO - After basic cleaning: 2895 records
+2025-06-11 10:58:51,726 - src.data_preprocessor - INFO - Removed 7 duplicate records
+2025-06-11 10:58:51,727 - src.data_preprocessor - INFO - After duplicate removal: 2888 records
+2025-06-11 10:58:51,743 - src.data_preprocessor - INFO - After outlier handling: 2888 records
+2025-06-11 10:58:51,745 - src.data_preprocessor - INFO - Retained 8 elevations with sufficient data
+2025-06-11 10:58:51,746 - src.data_preprocessor - INFO - After elevation filtering: 2888 records
+2025-06-11 10:58:51,748 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 2888
+2025-06-11 10:58:51,749 - src.feature_engineer - INFO - Starting feature engineering with 2888 records
+2025-06-11 10:58:51,784 - src.feature_engineer - INFO - Created features for BT: 361 records
+2025-06-11 10:58:51,820 - src.feature_engineer - INFO - Created features for H: 361 records
+2025-06-11 10:58:51,860 - src.feature_engineer - INFO - Created features for L: 361 records
+2025-06-11 10:58:51,895 - src.feature_engineer - INFO - Created features for M: 361 records
+2025-06-11 10:58:51,929 - src.feature_engineer - INFO - Created features for UH: 361 records
+2025-06-11 10:58:51,967 - src.feature_engineer - INFO - Created features for UM: 361 records
+2025-06-11 10:58:52,005 - src.feature_engineer - INFO - Created features for WH: 361 records
+2025-06-11 10:58:52,040 - src.feature_engineer - INFO - Created features for WM: 361 records
+2025-06-11 10:58:52,360 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 10:59:09,737 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:09,737 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:09,738 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:09,738 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:09,739 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:09,739 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:09,740 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:09,740 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:09,742 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:09,758 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:09,761 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:10,626 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:10,626 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:10,627 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:10,629 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:10,630 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:10,630 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:10,630 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:10,631 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:10,633 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:10,650 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:10,652 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:10,925 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:10,926 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:10,927 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:10,927 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:10,927 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:10,927 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:10,928 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:10,928 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:10,929 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:10,944 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:10,947 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:11,223 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:11,223 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:11,223 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:11,224 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:11,224 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:11,225 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:11,225 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:11,226 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:11,227 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:11,243 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:11,246 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:15,980 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:15,980 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:15,980 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:15,981 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:15,982 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:15,982 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:15,982 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:15,982 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:15,984 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:16,003 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:16,005 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:18,147 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:18,148 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:18,148 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:18,148 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:18,148 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:18,149 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:18,149 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:18,150 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:18,151 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:18,166 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:18,169 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:18,439 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:18,440 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:18,440 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:18,440 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:18,442 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:18,443 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:18,443 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:18,444 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:18,447 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:18,465 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:18,470 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:18,724 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:18,725 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:18,725 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:18,725 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:18,726 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:18,726 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:18,727 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:18,727 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:18,728 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:18,743 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:18,746 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:21,050 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:21,050 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:21,050 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:21,050 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:21,051 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:21,051 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:21,051 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:21,051 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:21,052 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:21,071 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:21,073 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:30,243 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 10:59:30,244 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:30,244 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 10:59:30,245 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 10:59:30,245 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 10:59:30,245 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 10:59:30,246 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 10:59:30,246 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 10:59:30,247 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 10:59:30,264 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 10:59:30,267 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 10:59:30,319 - src.simple_predictor - INFO - Training models for BT with 361 records
+2025-06-11 10:59:37,448 - src.simple_predictor - INFO - Ensemble weights for BT: {'random_forest': np.float64(0.2715374980092502), 'gradient_boosting': np.float64(0.28786334175128103), 'ridge': np.float64(0.44059916023946877)}
+2025-06-11 10:59:37,457 - src.simple_predictor - INFO - Training completed for BT
+2025-06-11 10:59:37,515 - src.simple_predictor - INFO - Training models for H with 361 records
+2025-06-11 10:59:44,863 - src.simple_predictor - INFO - Ensemble weights for H: {'random_forest': np.float64(0.3318473811983242), 'gradient_boosting': np.float64(0.3226068341688843), 'ridge': np.float64(0.3455457846327914)}
+2025-06-11 10:59:44,864 - src.simple_predictor - INFO - Training completed for H
+2025-06-11 10:59:44,910 - src.simple_predictor - INFO - Training models for L with 361 records
+2025-06-11 10:59:51,610 - src.simple_predictor - INFO - Ensemble weights for L: {'random_forest': np.float64(0.24700336692364594), 'gradient_boosting': np.float64(0.2460311330012677), 'ridge': np.float64(0.5069655000750863)}
+2025-06-11 10:59:51,610 - src.simple_predictor - INFO - Training completed for L
+2025-06-11 10:59:51,685 - src.simple_predictor - INFO - Training models for M with 361 records
+2025-06-11 10:59:58,674 - src.simple_predictor - INFO - Ensemble weights for M: {'random_forest': np.float64(0.3315899257159237), 'gradient_boosting': np.float64(0.3005302211986655), 'ridge': np.float64(0.3678798530854109)}
+2025-06-11 10:59:58,674 - src.simple_predictor - INFO - Training completed for M
+2025-06-11 10:59:58,774 - src.simple_predictor - INFO - Training models for UH with 361 records
+2025-06-11 11:00:05,637 - src.simple_predictor - INFO - Ensemble weights for UH: {'random_forest': np.float64(0.3488763285309796), 'gradient_boosting': np.float64(0.2962137150574017), 'ridge': np.float64(0.35490995641161877)}
+2025-06-11 11:00:05,638 - src.simple_predictor - INFO - Training completed for UH
+2025-06-11 11:00:05,675 - src.simple_predictor - INFO - Training models for UM with 361 records
+2025-06-11 11:00:12,468 - src.simple_predictor - INFO - Ensemble weights for UM: {'random_forest': np.float64(0.31261400912066983), 'gradient_boosting': np.float64(0.2973206604269102), 'ridge': np.float64(0.39006533045242)}
+2025-06-11 11:00:12,468 - src.simple_predictor - INFO - Training completed for UM
+2025-06-11 11:00:12,506 - src.simple_predictor - INFO - Training models for WH with 361 records
+2025-06-11 11:00:19,126 - src.simple_predictor - INFO - Ensemble weights for WH: {'random_forest': np.float64(0.3261064475567884), 'gradient_boosting': np.float64(0.31056556260797297), 'ridge': np.float64(0.3633279898352386)}
+2025-06-11 11:00:19,128 - src.simple_predictor - INFO - Training completed for WH
+2025-06-11 11:00:19,223 - src.simple_predictor - INFO - Training models for WM with 361 records
+2025-06-11 11:00:26,088 - src.simple_predictor - INFO - Ensemble weights for WM: {'random_forest': np.float64(0.3234807801855224), 'gradient_boosting': np.float64(0.2878230696631758), 'ridge': np.float64(0.38869615015130177)}
+2025-06-11 11:00:26,101 - src.simple_predictor - INFO - Training completed for WM
+2025-06-11 11:00:36,642 - src.data_loader - INFO - Successfully loaded XLSX with 2895 records and 5 columns
+2025-06-11 11:00:36,642 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:00:36,642 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:00:36,643 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 11:00:36,644 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 11:00:36,644 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 11:00:36,644 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 11:00:36,645 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 11:00:36,646 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2895, 5)
+2025-06-11 11:00:36,663 - src.data_loader - INFO - Data type validation completed. Remaining records: 2895
+2025-06-11 11:00:36,666 - src.data_loader - INFO - Range validation completed. Valid records: 2895
+2025-06-11 11:02:10,186 - src.data_loader - INFO - Successfully loaded XLSX with 2903 records and 5 columns
+2025-06-11 11:02:10,187 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:02:10,187 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:02:10,188 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 11:02:10,189 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 11:02:10,189 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 11:02:10,190 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 11:02:10,190 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 11:02:10,192 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 11:02:10,209 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 11:02:10,212 - src.data_loader - INFO - Range validation completed. Valid records: 2903
+2025-06-11 11:02:13,222 - src.data_loader - INFO - Successfully loaded XLSX with 2903 records and 5 columns
+2025-06-11 11:02:13,223 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:02:13,224 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:02:13,224 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 11:02:13,224 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 11:02:13,225 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 11:02:13,225 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 11:02:13,225 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 11:02:13,226 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 11:02:13,242 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 11:02:13,245 - src.data_loader - INFO - Range validation completed. Valid records: 2903
+2025-06-11 11:02:13,252 - src.data_preprocessor - INFO - Starting data cleaning with 2903 records
+2025-06-11 11:02:13,257 - src.data_preprocessor - INFO - After basic cleaning: 2903 records
+2025-06-11 11:02:13,259 - src.data_preprocessor - INFO - Removed 7 duplicate records
+2025-06-11 11:02:13,260 - src.data_preprocessor - INFO - After duplicate removal: 2896 records
+2025-06-11 11:02:13,276 - src.data_preprocessor - INFO - After outlier handling: 2896 records
+2025-06-11 11:02:13,278 - src.data_preprocessor - INFO - Retained 8 elevations with sufficient data
+2025-06-11 11:02:13,279 - src.data_preprocessor - INFO - After elevation filtering: 2896 records
+2025-06-11 11:02:13,281 - src.data_preprocessor - INFO - Data cleaning completed. Final records: 2896
+2025-06-11 11:02:13,281 - src.feature_engineer - INFO - Starting feature engineering with 2896 records
+2025-06-11 11:02:13,318 - src.feature_engineer - INFO - Created features for BT: 362 records
+2025-06-11 11:02:13,349 - src.feature_engineer - INFO - Created features for H: 362 records
+2025-06-11 11:02:13,382 - src.feature_engineer - INFO - Created features for L: 362 records
+2025-06-11 11:02:13,415 - src.feature_engineer - INFO - Created features for M: 362 records
+2025-06-11 11:02:13,450 - src.feature_engineer - INFO - Created features for UH: 362 records
+2025-06-11 11:02:13,487 - src.feature_engineer - INFO - Created features for UM: 362 records
+2025-06-11 11:02:13,521 - src.feature_engineer - INFO - Created features for WH: 362 records
+2025-06-11 11:02:13,557 - src.feature_engineer - INFO - Created features for WM: 362 records
+2025-06-11 11:02:13,859 - src.feature_engineer - INFO - Feature engineering completed. Total features: 92
+2025-06-11 11:02:25,918 - src.data_loader - INFO - Successfully loaded XLSX with 2903 records and 5 columns
+2025-06-11 11:02:25,919 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:02:25,919 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:02:25,920 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 11:02:25,920 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 11:02:25,921 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 11:02:25,921 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 11:02:25,921 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 11:02:25,923 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 11:02:25,941 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 11:02:25,944 - src.data_loader - INFO - Range validation completed. Valid records: 2903
+2025-06-11 11:02:25,998 - src.simple_predictor - INFO - Training models for BT with 362 records
+2025-06-11 11:02:32,689 - src.simple_predictor - INFO - Ensemble weights for BT: {'random_forest': np.float64(0.2706835802446157), 'gradient_boosting': np.float64(0.2827213258784551), 'ridge': np.float64(0.44659509387692936)}
+2025-06-11 11:02:32,691 - src.simple_predictor - INFO - Training completed for BT
+2025-06-11 11:02:32,735 - src.simple_predictor - INFO - Training models for H with 362 records
+2025-06-11 11:02:39,392 - src.simple_predictor - INFO - Ensemble weights for H: {'random_forest': np.float64(0.32651431644033324), 'gradient_boosting': np.float64(0.3173795864834139), 'ridge': np.float64(0.35610609707625296)}
+2025-06-11 11:02:39,392 - src.simple_predictor - INFO - Training completed for H
+2025-06-11 11:02:39,473 - src.simple_predictor - INFO - Training models for L with 362 records
+2025-06-11 11:02:45,992 - src.simple_predictor - INFO - Ensemble weights for L: {'random_forest': np.float64(0.25078858834686296), 'gradient_boosting': np.float64(0.25252649044680436), 'ridge': np.float64(0.4966849212063327)}
+2025-06-11 11:02:45,996 - src.simple_predictor - INFO - Training completed for L
+2025-06-11 11:02:46,057 - src.simple_predictor - INFO - Training models for M with 362 records
+2025-06-11 11:02:53,291 - src.simple_predictor - INFO - Ensemble weights for M: {'random_forest': np.float64(0.3239290084476192), 'gradient_boosting': np.float64(0.3012955457559192), 'ridge': np.float64(0.37477544579646166)}
+2025-06-11 11:02:53,292 - src.simple_predictor - INFO - Training completed for M
+2025-06-11 11:02:53,345 - src.simple_predictor - INFO - Training models for UH with 362 records
+2025-06-11 11:02:59,917 - src.simple_predictor - INFO - Ensemble weights for UH: {'random_forest': np.float64(0.34002620433159286), 'gradient_boosting': np.float64(0.3022556043122643), 'ridge': np.float64(0.3577181913561429)}
+2025-06-11 11:02:59,917 - src.simple_predictor - INFO - Training completed for UH
+2025-06-11 11:02:59,983 - src.simple_predictor - INFO - Training models for UM with 362 records
+2025-06-11 11:03:06,773 - src.simple_predictor - INFO - Ensemble weights for UM: {'random_forest': np.float64(0.3101138993835688), 'gradient_boosting': np.float64(0.30002022741677714), 'ridge': np.float64(0.38986587319965404)}
+2025-06-11 11:03:06,773 - src.simple_predictor - INFO - Training completed for UM
+2025-06-11 11:03:06,859 - src.simple_predictor - INFO - Training models for WH with 362 records
+2025-06-11 11:03:13,419 - src.simple_predictor - INFO - Ensemble weights for WH: {'random_forest': np.float64(0.3211033233134151), 'gradient_boosting': np.float64(0.30320221811217424), 'ridge': np.float64(0.3756944585744107)}
+2025-06-11 11:03:13,420 - src.simple_predictor - INFO - Training completed for WH
+2025-06-11 11:03:13,457 - src.simple_predictor - INFO - Training models for WM with 362 records
+2025-06-11 11:03:20,036 - src.simple_predictor - INFO - Ensemble weights for WM: {'random_forest': np.float64(0.31143948281511086), 'gradient_boosting': np.float64(0.28613306595361293), 'ridge': np.float64(0.40242745123127627)}
+2025-06-11 11:03:20,037 - src.simple_predictor - INFO - Training completed for WM
+2025-06-11 11:03:30,870 - src.data_loader - INFO - Successfully loaded XLSX with 2903 records and 5 columns
+2025-06-11 11:03:30,871 - src.data_loader - INFO - Original columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:03:30,871 - src.data_loader - INFO - Cleaned columns: ['Year', 'Sale Number', 'Elevation', 'Quantity', 'Average Price']
+2025-06-11 11:03:30,871 - src.data_loader - INFO - Mapped 'Year' to 'year'
+2025-06-11 11:03:30,872 - src.data_loader - INFO - Mapped 'Sale Number' to 'sale_no'
+2025-06-11 11:03:30,872 - src.data_loader - INFO - Mapped 'Elevation' to 'elevation'
+2025-06-11 11:03:30,872 - src.data_loader - INFO - Mapped 'Quantity' to 'quantity'
+2025-06-11 11:03:30,874 - src.data_loader - INFO - Mapped 'Average Price' to 'price'
+2025-06-11 11:03:30,876 - src.data_loader - INFO - Successfully mapped columns. Final shape: (2903, 5)
+2025-06-11 11:03:30,890 - src.data_loader - INFO - Data type validation completed. Remaining records: 2903
+2025-06-11 11:03:30,893 - src.data_loader - INFO - Range validation completed. Valid records: 2903

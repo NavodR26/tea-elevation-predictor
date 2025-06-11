@@ -138,9 +138,9 @@ class FeatureEngineer:
             # Year-over-year comparison
             df['year_diff'] = df['year'] - df['year'].min()
             
-            # Sale number categories
-            df['sale_quarter'] = pd.cut(df['sale_no'], bins=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])
-            df['sale_quarter'] = df['sale_quarter'].astype(str)
+            # Sale number categories (numeric encoding)
+            df['sale_quarter'] = pd.cut(df['sale_no'], bins=4, labels=[1, 2, 3, 4])
+            df['sale_quarter'] = df['sale_quarter'].astype(int)
             
             # Binary indicators for special periods
             df['is_year_start'] = (df['sale_no'] <= 4).astype(int)  # First month
@@ -336,7 +336,9 @@ class FeatureEngineer:
         try:
             exclude_cols = ['year', 'sale_no', 'elevation', 'quantity', 'price']
             feature_cols = [col for col in df.columns if col not in exclude_cols]
-            return feature_cols
+            # Only include numeric columns
+            numeric_cols = df[feature_cols].select_dtypes(include=[np.number]).columns.tolist()
+            return numeric_cols
             
         except Exception as e:
             logger.error(f"Error getting feature columns: {str(e)}")

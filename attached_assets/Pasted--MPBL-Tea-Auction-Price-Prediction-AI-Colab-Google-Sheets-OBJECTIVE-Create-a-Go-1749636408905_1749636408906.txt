@@ -1,0 +1,52 @@
+# 🔮 MPBL Tea Auction Price Prediction AI (Colab + Google Sheets)
+
+"""
+🎯 OBJECTIVE:
+Create a Google Colab script that loads historical weekly tea auction data (2018–2025) from a Google Sheet,
+trains high-accuracy ML models (XGBoost + BiLSTM) for each elevation, and predicts the next sale's average price per elevation.
+Then save the predictions and model results into another Google Sheet in a well-organized format.
+
+📊 SOURCE SHEET:
+- Google Sheet Name: "Elevation Avg"
+- Tab Name: "Data"
+- Columns: YEAR, SALENO, ELEVATION, QTY, AVG
+- This contains historical weekly average prices for all tea elevations.
+
+📤 DESTINATION SHEET:
+- Google Sheet Name: "External Data"
+- Required Tabs:
+    1. "Next Sale Predictions" — Columns: ELEVATION, XGBoost Prediction, BiLSTM Prediction, Final Prediction
+    2. "Model Accuracy" — Columns: ELEVATION, XGB R², XGB RMSE, BiLSTM R², BiLSTM RMSE
+    3. "Prediction Logs" — Optional: For timestamp, errors, or notes
+
+🧠 MODEL REQUIREMENTS:
+- Train and evaluate XGBoost and BiLSTM models per elevation
+- Use advanced features like:
+    - Previous average prices (lags)
+    - Moving averages (e.g., 3-sale, 5-sale)
+    - Quantity-to-price ratios
+    - Sale number or week as time feature
+    - Previous price change (%) or trend
+- Perform hyperparameter tuning for better accuracy
+- Ensemble model output by averaging or weighted method
+- Evaluate models using R² and RMSE
+
+💾 INTEGRATION:
+- Authenticate using Google Colab's auth system:
+    from google.auth import default
+    creds, _ = default()
+    gc = gspread.authorize(creds)
+
+- Load from "Elevation Avg" > "Data"
+- Save results to "External Data" with required tabs
+
+✅ REQUIREMENTS:
+- Highly accurate and reliable predictions for next sale (e.g., if last entry is 2025 Sale 1, predict Sale 2)
+- Clean, readable, well-commented code
+- Modular design: separate functions for data loading, feature engineering, model training, prediction, and saving
+- Automatically overwrite old predictions in "External Data" when rerun
+
+📌 TASK:
+Write the full Python code in Google Colab with all above features implemented. Use pandas, XGBoost, TensorFlow/Keras, and gspread.
+
+"""

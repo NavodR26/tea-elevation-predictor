@@ -431,7 +431,7 @@ def handle_model_training():
         with col1:
             min_records = st.number_input(
                 "Minimum Records per Elevation",
-                min_value=10,
+                min_value=5,
                 max_value=100,
                 value=config.MIN_RECORDS_PER_ELEVATION
             )

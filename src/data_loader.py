@@ -17,21 +17,31 @@ class DataLoader:
     def __init__(self, config):
         self.config = config
         
-    def load_csv(self, uploaded_file) -> pd.DataFrame:
-        """Load data from uploaded CSV file"""
+    def load_file(self, uploaded_file) -> pd.DataFrame:
+        """Load data from uploaded CSV or Excel file"""
         try:
-            # Read CSV file
-            df = pd.read_csv(uploaded_file)
+            file_extension = uploaded_file.name.split('.')[-1].lower()
+            
+            if file_extension == 'csv':
+                df = pd.read_csv(uploaded_file)
+            elif file_extension in ['xlsx', 'xls']:
+                df = pd.read_excel(uploaded_file, engine='openpyxl' if file_extension == 'xlsx' else 'xlrd')
+            else:
+                raise ValueError(f"Unsupported file format: {file_extension}")
             
             if df.empty:
-                raise ValueError("The uploaded CSV file is empty")
+                raise ValueError("The uploaded file is empty")
             
-            logger.info(f"Successfully loaded CSV with {len(df)} records and {len(df.columns)} columns")
+            logger.info(f"Successfully loaded {file_extension.upper()} with {len(df)} records and {len(df.columns)} columns")
             return self._validate_and_map_columns(df)
             
         except Exception as e:
-            logger.error(f"Error loading CSV file: {str(e)}")
-            raise ValueError(f"Failed to load CSV file: {str(e)}")
+            logger.error(f"Error loading file: {str(e)}")
+            raise ValueError(f"Failed to load file: {str(e)}")
+    
+    def load_csv(self, uploaded_file) -> pd.DataFrame:
+        """Legacy method - redirects to load_file"""
+        return self.load_file(uploaded_file)
     
     def _validate_and_map_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         """Validate and map column names to standard format"""

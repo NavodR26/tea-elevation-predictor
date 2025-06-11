@@ -110,8 +110,8 @@ def handle_csv_upload():
     st.subheader("📁 Upload CSV File")
     
     uploaded_file = st.file_uploader(
-        "Choose a CSV file with tea auction data",
-        type=['csv'],
+        "Choose a CSV or Excel file with tea auction data",
+        type=['csv', 'xlsx', 'xls'],
         help="Expected columns: Year, Sale Number, Elevation, Quantity, Average Price"
     )
     
@@ -119,7 +119,7 @@ def handle_csv_upload():
         try:
             # Load and validate data
             data_loader = DataLoader(config)
-            df = data_loader.load_csv(uploaded_file)
+            df = data_loader.load_file(uploaded_file)
             df = data_loader.validate_data_types(df)
             df = data_loader.validate_data_ranges(df)
             
@@ -672,9 +672,9 @@ def display_predictions(predictions, confidence_intervals, next_year, next_sale)
             'Predicted Price': format_currency(pred_result['ensemble']),
             'Lower 95% CI': format_currency(ci['lower']),
             'Upper 95% CI': format_currency(ci['upper']),
-            'LightGBM': format_currency(pred_result['lightgbm']),
-            'XGBoost': format_currency(pred_result['xgboost']),
-            'CatBoost': format_currency(pred_result['catboost'])
+            'Random Forest': format_currency(pred_result['random_forest']),
+            'Gradient Boosting': format_currency(pred_result['gradient_boosting']),
+            'Ridge': format_currency(pred_result['ridge'])
         })
     
     pred_df = pd.DataFrame(pred_data)
@@ -687,7 +687,7 @@ def display_predictions(predictions, confidence_intervals, next_year, next_sale)
     with col1:
         st.metric("Total Elevations", len(predictions))
     with col2:
-        st.metric("Avg Predicted Price", format_currency(np.mean(ensemble_predictions)))
+        st.metric("Avg Predicted Price", format_currency(float(np.mean(ensemble_predictions))))
     with col3:
         st.metric("Min Predicted Price", format_currency(np.min(ensemble_predictions)))
     with col4:
@@ -785,9 +785,9 @@ def export_results(export_format, include_analysis, export_sheet_name):
                 'Lower_95_CI': ci['lower'],
                 'Upper_95_CI': ci['upper'],
                 'Price_Std': ci['std'],
-                'LightGBM_Prediction': pred_result['lightgbm'],
-                'XGBoost_Prediction': pred_result['xgboost'],
-                'CatBoost_Prediction': pred_result['catboost'],
+                'RandomForest_Prediction': pred_result['random_forest'],
+                'GradientBoosting_Prediction': pred_result['gradient_boosting'],
+                'Ridge_Prediction': pred_result['ridge'],
                 'Prediction_Date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             })
         

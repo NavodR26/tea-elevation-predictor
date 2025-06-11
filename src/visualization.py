@@ -288,7 +288,7 @@ class Visualizer:
             ))
             
             # Add individual model predictions
-            model_names = ['lightgbm', 'xgboost', 'catboost']
+            model_names = ['random_forest', 'gradient_boosting', 'ridge']
             colors_models = ['blue', 'green', 'orange']
             
             for i, model in enumerate(model_names):

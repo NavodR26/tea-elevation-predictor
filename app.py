@@ -276,10 +276,29 @@ def display_processed_data_info(cleaned_df, featured_df):
         min_records = cleaned_df.groupby('elevation').size().min()
         st.metric("Min Records/Elevation", min_records)
     
-    # Show elevation distribution
-    elevation_counts = cleaned_df['elevation'].value_counts()
+    # Show elevation distribution with detailed analysis
+    elevation_counts = cleaned_df['elevation'].value_counts().reset_index()
+    elevation_counts.columns = ['Elevation', 'Record Count']
+    elevation_counts['Status'] = elevation_counts['Record Count'].apply(
+        lambda x: '✅ Sufficient' if x >= 10 else '❌ Insufficient'
+    )
+    
     st.subheader("📈 Records per Elevation")
-    st.bar_chart(elevation_counts)
+    col1, col2 = st.columns(2)
+    with col1:
+        st.bar_chart(elevation_counts.set_index('Elevation')['Record Count'])
+    with col2:
+        st.dataframe(elevation_counts, use_container_width=True)
+    
+    # Show training eligibility
+    sufficient_elevations = elevation_counts[elevation_counts['Record Count'] >= 10]['Elevation'].tolist()
+    insufficient_elevations = elevation_counts[elevation_counts['Record Count'] < 10]['Elevation'].tolist()
+    
+    if sufficient_elevations:
+        st.success(f"Will train models for: {', '.join(sufficient_elevations)}")
+    if insufficient_elevations:
+        st.warning(f"Skipping (insufficient data): {', '.join(insufficient_elevations)}")
+        st.info("Need at least 10 records per elevation for reliable model training")
     
     # Show feature columns
     with st.expander("🔍 View Feature Columns"):
@@ -705,7 +724,7 @@ def display_predictions(predictions, confidence_intervals, next_year, next_sale)
     
     agreement_data = []
     for elevation, pred_result in predictions.items():
-        models = ['lightgbm', 'xgboost', 'catboost']
+        models = ['random_forest', 'gradient_boosting', 'ridge']
         model_preds = [pred_result[model] for model in models]
         agreement_std = np.std(model_preds)
         agreement_data.append({

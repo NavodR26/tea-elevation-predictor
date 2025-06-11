@@ -27,7 +27,7 @@ class TeaMarketConfig:
     
     # Feature Engineering Parameters
     MAX_SALES_PER_YEAR = 52
-    MIN_RECORDS_PER_ELEVATION = 20
+    MIN_RECORDS_PER_ELEVATION = 10
     LAG_PERIODS = [1, 2, 4, 8, 12]  # Weekly lags
     ROLLING_WINDOWS = [4, 8, 12, 24]  # Rolling window sizes
     

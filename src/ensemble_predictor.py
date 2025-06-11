@@ -10,13 +10,19 @@ import warnings
 from sklearn.preprocessing import RobustScaler
 from sklearn.model_selection import TimeSeriesSplit, cross_val_score
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-import optuna
+try:
+    import optuna
+    OPTUNA_AVAILABLE = True
+except ImportError:
+    OPTUNA_AVAILABLE = False
+    
 from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 from catboost import CatBoostRegressor
 
 warnings.filterwarnings('ignore')
-optuna.logging.set_verbosity(optuna.logging.WARNING)
+if OPTUNA_AVAILABLE:
+    optuna.logging.set_verbosity(optuna.logging.WARNING)
 logger = logging.getLogger(__name__)
 
 class EnsemblePredictor:
@@ -48,7 +54,7 @@ class EnsemblePredictor:
             X_scaled = self.scaler.fit_transform(X)
             
             # Train models
-            if deep_train and self.config.ENABLE_DEEP_TRAINING:
+            if deep_train and self.config.ENABLE_DEEP_TRAINING and OPTUNA_AVAILABLE:
                 training_results = self._train_with_optuna(X_scaled, y)
             else:
                 training_results = self._train_default(X_scaled, y)
@@ -76,6 +82,10 @@ class EnsemblePredictor:
     def _train_with_optuna(self, X: np.ndarray, y: np.ndarray) -> Dict:
         """Train models with Optuna hyperparameter optimization"""
         try:
+            if not OPTUNA_AVAILABLE:
+                logger.warning("Optuna not available, falling back to default training")
+                return self._train_default(X, y)
+                
             training_results = {}
             
             # Time series cross-validation

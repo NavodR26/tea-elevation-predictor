@@ -6,7 +6,7 @@ class TeaMarketConfig:
     """Configuration class for Sri Lankan Tea Market predictions"""
     
     # Training Configuration
-    ENABLE_DEEP_TRAINING = True
+    ENABLE_DEEP_TRAINING = False  # Disabled due to optuna unavailability
     OPTUNA_TRIALS = 30
     CROSS_VALIDATION_FOLDS = 3
     ENSEMBLE_VOTING = True

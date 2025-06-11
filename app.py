@@ -256,6 +256,30 @@ def display_data_info(df):
             avg_price = df['Average Price'].mean()
             st.metric("Avg Price", format_currency(avg_price))
     
+    # Show ALL elevations in original data before any filtering
+    if 'Elevation' in df.columns:
+        st.subheader("📊 All Elevations in Your Data")
+        elevation_counts_raw = df['Elevation'].value_counts().reset_index()
+        elevation_counts_raw.columns = ['Elevation', 'Record Count']
+        elevation_counts_raw['Will Process'] = elevation_counts_raw['Record Count'].apply(
+            lambda x: '✅ Yes' if x >= 10 else '❌ No (needs ≥10)'
+        )
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.bar_chart(elevation_counts_raw.set_index('Elevation')['Record Count'])
+        with col2:
+            st.dataframe(elevation_counts_raw, use_container_width=True)
+        
+        # Show processing summary
+        will_process = elevation_counts_raw[elevation_counts_raw['Record Count'] >= 10]['Elevation'].tolist()
+        wont_process = elevation_counts_raw[elevation_counts_raw['Record Count'] < 10]['Elevation'].tolist()
+        
+        if will_process:
+            st.success(f"Will process: {', '.join(will_process)}")
+        if wont_process:
+            st.warning(f"Cannot process (insufficient data): {', '.join(wont_process)}")
+    
     # Show data preview
     st.subheader("📋 Data Preview")
     st.dataframe(df.head(10), use_container_width=True)
